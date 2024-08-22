@@ -33,6 +33,7 @@ extern "C"
 
 	void KalmanFilter_init(KalmanFilter_Handle* handle);
 	void KalmanFilter_filter(KalmanFilter_Handle* handle, float input, float* output);
+	void KalmanFilter_reset(KalmanFilter_Handle* handle);
 
 #ifdef __cplusplus
 }

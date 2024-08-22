@@ -20,6 +20,11 @@ extern "C"
 		handle->estimated += (input - handle->estimated) / handle->bufferLength;
 		*output = handle->estimated;
 	}
+	void KalmanFilter_reset(KalmanFilter_Handle* handle)
+	{
+		handle->bufferLength = 0;
+		handle->estimated = 0;
+	}
 
 #ifdef __cplusplus
 }
